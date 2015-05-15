@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.neusoft.mooko</groupId>
-	<artifactId>mk-web-blank</artifactId>
+	<artifactId>moosm</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>Mooko WEB Application</name>
@@ -114,11 +114,11 @@
 			<artifactId>sitemesh</artifactId>
 			<version>${sitemesh.version}</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>classes12</artifactId>
 			<version>${oracle-driver.version}</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>

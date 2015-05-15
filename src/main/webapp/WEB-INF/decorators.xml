@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 模版文件的默认路径 -->
+<decorators defaultdir="/WEB-INF/pages/decorators">
+	<excludes>
+		<pattern>/login*</pattern>
+	</excludes>
+	
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+</decorators>

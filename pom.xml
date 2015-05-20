@@ -19,6 +19,7 @@
 		<commons-logging.version>1.2</commons-logging.version>
 		<commons-pool.version>1.6</commons-pool.version>
 		<freemarker.version>2.3.22</freemarker.version>
+		<groovy.version>2.4.3</groovy.version>
 		<jackson.version>2.5.3</jackson.version>
 		<jstl.version>1.2</jstl.version>
 		<junit.version>4.12</junit.version>
@@ -91,6 +92,11 @@
 			<!--<artifactId>log4j</artifactId>-->
 			<!--<version>${log4j.version}</version>-->
 		<!--</dependency>-->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>${groovy.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -224,20 +230,44 @@
 				<directory>${basedir}/src/main/java</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
+					<exclude>**/*.groovy</exclude>
+					<exclude>**/*.scala</exclude>
 				</excludes>
 			</resource>
 		</resources>
 		<pluginManagement>
 			<plugins>
+				<!--<plugin>-->
+					<!--<groupId>org.apache.maven.plugins</groupId>-->
+					<!--<artifactId>maven-compiler-plugin</artifactId>-->
+					<!--<configuration>-->
+						<!--<source>1.7</source>-->
+						<!--<target>1.7</target>-->
+						<!--<maxmem>256m</maxmem>-->
+						<!--<fork>true</fork>-->
+					<!--</configuration>-->
+				<!--</plugin>-->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
 					<configuration>
+						<compilerId>groovy-eclipse-compiler</compilerId>
 						<source>1.7</source>
 						<target>1.7</target>
-						<maxmem>256m</maxmem>
-						<fork>true</fork>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.codehaus.groovy</groupId>
+							<artifactId>groovy-eclipse-compiler</artifactId>
+							<version>2.9.1-01</version>
+						</dependency>
+						<dependency>
+							<groupId>org.codehaus.groovy</groupId>
+							<artifactId>groovy-eclipse-batch</artifactId>
+							<version>2.3.7-01</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.mortbay.jetty</groupId>

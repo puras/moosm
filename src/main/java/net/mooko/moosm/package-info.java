@@ -11,4 +11,4 @@
  * @author <a href="mailto:hegq@neusoft.com">Puras.He</a>
  * @version $Revision 1.0 $ 2013年8月26日 上午10:35:25
  */
-package com.neusoft.mooko;
+package net.mooko.moosm;

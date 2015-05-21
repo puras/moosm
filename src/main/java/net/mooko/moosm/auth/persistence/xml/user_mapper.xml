@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.mooko.moosm.auth.persistence.shared.UserMapper">
+    <insert id="insert" keyProperty="id" parameterType="net.mooko.moosm.auth.entity.User" useGeneratedKeys="true">
+        INSERT INTO mk_users(`name`, `email`, `passwd`)
+        VALUES(#{name}, #{email}, #{passwd})
+    </insert>
+</mapper>

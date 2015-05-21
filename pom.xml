@@ -11,6 +11,7 @@
 	<properties>
 		<aspectj.version>1.8.5</aspectj.version>
 		<aspectjweaver.version>1.8.5</aspectjweaver.version>
+        <bonecp.version>0.8.0.RELEASE</bonecp.version>
 		<cglib.version>3.1</cglib.version>
 		<commons-collections.version>3.2.1</commons-collections.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
@@ -47,7 +48,12 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectjweaver.version}</version>
 		</dependency>
-		<dependency>
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>${bonecp.version}</version>
+        </dependency>
+        <dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>${cglib.version}</version>
@@ -224,17 +230,17 @@
 		<finalName>MooSM</finalName>
 		<resources>
 			<resource>
-				<directory>${basedir}/src/resources</directory>
+				<directory>${basedir}/src/main/resources</directory>
 			</resource>
 			<resource>
 				<directory>${basedir}/src/main/java</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
 					<exclude>**/*.groovy</exclude>
-					<exclude>**/*.scala</exclude>
 				</excludes>
 			</resource>
 		</resources>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<pluginManagement>
 			<plugins>
 				<!--<plugin>-->

@@ -11,7 +11,7 @@ import javax.servlet.Filter;
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] {AppConfig.class};
+        return new Class<?>[] {AppConfig.class, BoneCPDataSourceConfig.class, MyBatisConfig.class};
     }
 
     @Override
@@ -21,7 +21,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        System.out.println("getServletMappings");
         return new String[] {"/"};
     }
 

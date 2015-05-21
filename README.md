@@ -15,3 +15,7 @@ Spring MVC, MyBatis, SiteMesh(3.0), Groovy
 ## 2015.5.20
 
 * 增加Groovy编译配置
+
+## 2015.5.21
+
+* 增加MyBatis相关配置及Mapper使用演示
